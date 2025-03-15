@@ -4,22 +4,24 @@ function ProfileScreen() {
   return (
     <View style={styles.container}>
       <View style={styles.profileSection}>
-        <View />
+        <View style={styles.profileImage}></View>
         <View>
-          <Text>João da Silva</Text>
-          <Text>Desenvolvedor React Native</Text>
+          <Text style={styles.profileName}>João da Silva</Text>
+          <Text style={styles.profileRole}>Desenvolvedor React Native</Text>
         </View>
       </View>
-      <Text>Habilidades</Text>
       <View>
-        <View>
-          <Text>React Native</Text>
-        </View>
-        <View>
-          <Text>JavaScript</Text>
-        </View>
-        <View>
-          <Text>CSS</Text>
+        <Text style={styles.sectionTitle}>Habilidades</Text>
+        <View style={styles.skillsSection}>
+          <View style={styles.skillBadge}>
+            <Text style={styles.skillName}>React Native</Text>
+          </View>
+          <View style={styles.skillBadge}>
+            <Text style={styles.skillName}>JavaScript</Text>
+          </View>
+          <View style={styles.skillBadge}>
+            <Text style={styles.skillName}>CSS</Text>
+          </View>
         </View>
       </View>
     </View>
@@ -27,17 +29,37 @@ function ProfileScreen() {
 }
 
 const styles = StyleSheet.create({
-    container: { flex: 1, backgroundColor: "#FFFBFE", padding: 16 },
-    profileSection: { flexDirection: "row", alignItems: "center", marginBottom: 24, },
-    profileImage: { width: 80, height: 80, borderRadius: 40, backgroundColor: "#EADDFF", marginRight: 16, },
-    profileName: { fontSize: 20, fontWeight: "600", color: "#1C1B1F", },
-    profileRole: { fontSize: 16, color: "#49454F", },
-    sectionTitle: { fontSize: 18, fontWeight: "500", color: "#1C1B1F", marginBottom: 8, },
-    skillsSectiskillBadge: { backgroundColor: "#E8DEF8", paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, },
-    on: { flexDirection: "row", flexWrap: "wrap", gap: 8, },
-    skillName: { fontSize: 14, color: "#1C1B1F", },
-
+  container: { flex: 1, backgroundColor: "#FFFBFE", padding: 16 },
+  profileSection: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 24,
+  },
+  profileImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    backgroundColor: "#EADDFF",
+    marginRight: 16,
+  },
+  profileName: { fontSize: 20, fontWeight: "600", color: "#1C1B1F" },
+  profileRole: { fontSize: 16, color: "#49454F" },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: "500",
+    color: "#1C1B1F",
+    marginBottom: 8,
+  },
+  skillsSectiskillBadge: {
+    backgroundColor: "#E8DEF8",
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    borderRadius: 16,
+  },
+  skillBadge: { backgroundColor: "#E8DEF8", paddingHorizontal: 12, paddingVertical: 6, borderRadius: 16, },
+  skillsSection: { flexDirection: "row", flexWrap: "wrap", gap: 8, },
+  on: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  skillName: { fontSize: 14, color: "#1C1B1F" },
 });
-
 
 export default ProfileScreen;
