@@ -1,6 +1,9 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import Pilha from "./routes/Pilha";
+import AbaInferior from "./routes/AbaInferior";
+import AbaSuperior from "./routes/AbaSuperior";
+import Gaveta from "./routes/Gaveta";
 
 
 
@@ -8,7 +11,7 @@ function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Pilha/>
+        <AbaInferior/>
       </NavigationContainer>
     </SafeAreaProvider>
   );
